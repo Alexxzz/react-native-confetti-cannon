@@ -1,9 +1,9 @@
 import * as React from 'react'
 
-declare const TOP_MIN: number
-declare const DEFAULT_COLORS: Array<string>
-declare const DEFAULT_EXPLOSION_SPEED: number
-declare const DEFAULT_FALL_SPEED: number
+export const TOP_MIN: number
+export const DEFAULT_COLORS: Array<string>
+export const DEFAULT_EXPLOSION_SPEED: number
+export const DEFAULT_FALL_SPEED: number
 
 interface Props {
   count: number
@@ -24,10 +24,10 @@ interface Props {
   testID?: string
 }
 
-declare class Explosion extends React.PureComponent<Props> {
+interface Explosion extends React.ClassicComponentClass<Props> {
   start(resume?: boolean): void
   resume(): void
   stop(): void
 }
 
-export = Explosion
+export default Explosion
